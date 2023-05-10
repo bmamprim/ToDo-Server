@@ -1,0 +1,23 @@
+{
+  "name": "my_to_do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmamprim/ToDo-Server.git"
+  },
+  "author": "bellemamprim@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmamprim/ToDo-Server/issues"
+  },
+  "homepage": "https://github.com/bmamprim/ToDo-Server#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
