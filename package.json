@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
-    "test": "unit"
+    "dev": "node index.js && node ./swagger.js",
+    "format": "npx prettier --write .",
+    "test": "unit",
+    "prepare": "husky install",
+    "swagger-autogen": "node ./swagger.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,34 @@
   },
   "homepage": "https://github.com/bmamprim/ToDo-Server#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.2",
+    "jest": "^29.5.0",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "mongodb": "^5.4.0",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "2.8.8"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "printWidth": 80,
+    "requirePragma": true,
+    "trailingComma": "all"
   }
 }
